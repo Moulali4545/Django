@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Accessrecord</h1>
+    <div class="container">
+        {% if access_record %}
+        <table border="1" cellspacing="5px" width="500px" style="background-color: aqua;">
+            <th>Site Name</th>
+            <th>Date Accessed</th>
+            {% for acc in access_record %}
+            <tr>
+                <td>{{acc.name}}
+                </td>
+                <td>{{acc.date}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <h1>No Access Record</h1>
+        {% endif %}
+
+    </div>
+    
+</body>
+</html>

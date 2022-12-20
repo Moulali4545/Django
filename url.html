@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Websites</h1>
+    <div class="container">
+        {% if website %}
+        <table border="1" cellspacing="5px" width="500px" style="background-color: aqua;">
+            <th>Site Name</th>
+            <th>Url Name</th>
+            {% for acc in website %}
+            <tr>
+                <td>{{acc.name}}
+                </td>
+                <td>{{acc.url}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <h1>No Url Found</h1>
+        {% endif %}
+
+    </div>
+</body>
+</html>
